@@ -2,9 +2,9 @@
 
 namespace App;
 
-use Jenssegers\Mongodb\Eloquent\Model;
+use VoTong\Mongodb\Auth\User as Authenticatable;
 
-class Author extends Model
+class Author extends Authenticatable
 {
     /**
      * The attributes that are mass assignable.
