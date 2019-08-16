@@ -14,3 +14,7 @@
 Route::middleware('guest')->get('login', 'AuthController@login');
 Route::post('login', 'AuthController@handleLogin');
 Route::get('logout', 'AuthController@handleLogout');
+
+Route::get('/{any}', function () {
+    return view('spa');
+})->where('any', '.*');
